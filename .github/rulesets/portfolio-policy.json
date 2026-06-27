@@ -22,15 +22,6 @@
       }
     },
     {
-      "type": "commit_author_email_pattern",
-      "parameters": {
-        "name": "Require GitHub noreply author email",
-        "negate": false,
-        "operator": "ends_with",
-        "pattern": "@users.noreply.github.com"
-      }
-    },
-    {
       "type": "non_fast_forward"
     }
   ]
