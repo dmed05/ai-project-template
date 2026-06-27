@@ -1,0 +1,27 @@
+# Secrets and environment files
+.env
+.env.*
+!.env.example
+*.key
+*.pem
+*.p12
+*.pfx
+
+# Private operational data
+accounts/
+customer-data/
+production-data/
+private/
+calendar-exports/
+source-documents/
+
+# Generated and local files
+.DS_Store
+.idea/
+.vscode/
+*.swp
+__pycache__/
+node_modules/
+dist/
+build/
+coverage/

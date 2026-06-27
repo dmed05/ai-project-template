@@ -1,0 +1,37 @@
+{
+  "name": "Protect portfolio main branch",
+  "target": "branch",
+  "enforcement": "active",
+  "conditions": {
+    "ref_name": {
+      "include": ["refs/heads/main"],
+      "exclude": []
+    }
+  },
+  "rules": [
+    {
+      "type": "required_status_checks",
+      "parameters": {
+        "do_not_enforce_on_create": true,
+        "required_status_checks": [
+          {
+            "context": "portfolio-policy"
+          }
+        ],
+        "strict_required_status_checks_policy": true
+      }
+    },
+    {
+      "type": "commit_author_email_pattern",
+      "parameters": {
+        "name": "Require GitHub noreply author email",
+        "negate": false,
+        "operator": "ends_with",
+        "pattern": "@users.noreply.github.com"
+      }
+    },
+    {
+      "type": "non_fast_forward"
+    }
+  ]
+}
