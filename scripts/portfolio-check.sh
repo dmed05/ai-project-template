@@ -33,7 +33,8 @@ fi
 if [[ "$template_repo" == false ]]; then
   [[ ! -f .portfolio-template-marker ]] ||
     fail 'Remove .portfolio-template-marker after customizing the project.'
-  if git grep -n -I 'REPLACE_ME' -- . >/tmp/portfolio-placeholders.txt 2>/dev/null; then
+  if git grep -n -I 'REPLACE_ME' -- . ':!scripts/portfolio-check.sh' \
+    >/tmp/portfolio-placeholders.txt 2>/dev/null; then
     cat /tmp/portfolio-placeholders.txt >&2
     fail 'Replace all REPLACE_ME placeholders before publishing.'
   fi

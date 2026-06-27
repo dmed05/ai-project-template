@@ -1,10 +1,10 @@
 ## What changed
 
-REPLACE_ME
+Describe the scoped change.
 
 ## Operational or user impact
 
-REPLACE_ME
+Describe the operational or user impact.
 
 ## Validation
 
